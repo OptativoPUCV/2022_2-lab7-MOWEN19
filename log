@@ -152,3 +152,24 @@ In file included from test.c:2:
 cc1: all warnings being treated as errors
 Compilation failed
 a64ed3c
+Sun 16 Oct 2022 08:25:49 PM UTC: 
+ heap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:32:42: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   32 |     pq->heapArray = (heapElem*)realloc(pq->capac,sizeof(heapElem));
+      |                                        ~~^~~~~~~
+      |                                          |
+      |                                          int
+In file included from test.c:2:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdlib.h:550:29: note: expected ‘void *’ but argument is of type ‘int’
+  550 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:4:
+heap.c:30:9: error: unused variable ‘c’ [-Werror=unused-variable]
+   30 |     int c = pq->capac * 2 + 1;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+9f10f30
