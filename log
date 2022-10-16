@@ -173,3 +173,14 @@ heap.c:30:9: error: unused variable ‘c’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 9f10f30
+Sun 16 Oct 2022 08:26:05 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:9: error: unused variable ‘c’ [-Werror=unused-variable]
+   30 |     int c = pq->capac * 2 + 1;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+c12bd2f
