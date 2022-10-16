@@ -51,13 +51,13 @@ void heap_pop(Heap* pq){
 
   while((auxPosic <= pq->size && pq->heapArray[auxPosic].priority > auxPrio) || (auxPosic+1 <= pq->size && pq->heapArray[auxPosic+1].priority > auxPrio)){
       return ;
-      //heapElem auxTemp = pq->heapArray[(auxPosic-1)/2];
+      heapElem auxTemp = pq->heapArray[(auxPosic-1)/2];
     
-      //if(auxPosic+1 <= pq->size && pq->heapArray[auxPosic+1].priority > auxPrio){auxPosic ++;}
-       // pq->heapArray[(auxPosic-1)/2] = pq->heapArray[auxPosic];
-       // pq->heapArray[auxPosic] = auxTemp;  
-       // auxPosic = auxPosic*2 + 1;
-        //auxPrio = pq->heapArray[auxPosic].priority;
+      if(auxPosic+1 <= pq->size && pq->heapArray[auxPosic+1].priority > auxPrio){auxPosic ++;}
+        pq->heapArray[(auxPosic-1)/2] = pq->heapArray[auxPosic];
+        pq->heapArray[auxPosic] = auxTemp;  
+        auxPosic = auxPosic*2 + 1;
+        auxPrio = pq->heapArray[auxPosic].priority;
   }
 }
 
