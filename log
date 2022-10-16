@@ -184,3 +184,9 @@ heap.c:30:9: error: unused variable ‘c’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c12bd2f
+Sun 16 Oct 2022 08:26:21 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+d7160df
