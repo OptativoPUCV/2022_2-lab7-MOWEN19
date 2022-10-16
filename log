@@ -225,3 +225,20 @@ heap.c:52:94: error: ‘size’ undeclared (first use in this function)
       |                                                                                              ^~~~
 Compilation failed
 f14ddab
+Sun 16 Oct 2022 08:58:02 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:49:3: error: ‘auxPrio’ undeclared (first use in this function)
+   49 |   auxPrio = pq->heapArray[0].priority;
+      |   ^~~~~~~
+heap.c:49:3: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:50:3: error: ‘auxPosic’ undeclared (first use in this function)
+   50 |   auxPosic = 1;
+      |   ^~~~~~~~
+heap.c:52:94: error: ‘size’ undeclared (first use in this function)
+   52 |   while((auxPosic <= pq->size && pq->heapArray[auxPosic].priority > auxPrio) || auxPosic+1 <=size && pq->heapArray[auxPosic+1].priority > auxPrio){
+      |                                                                                              ^~~~
+Compilation failed
+9335c23
