@@ -341,3 +341,14 @@ Sun 16 Oct 2022 09:06:55 PM UTC:
  tests:  7|1
 total_score: 50/70
 e8c4e1a
+Sun 16 Oct 2022 09:07:07 PM UTC: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:54:16: error: unused variable ‘auxTemp’ [-Werror=unused-variable]
+   54 |       heapElem auxTemp = pq->heapArray[(auxPosic-1)/2];
+      |                ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e892fe2
