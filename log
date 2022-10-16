@@ -323,3 +323,9 @@ heap.c:52:104: error: suggest parentheses around ‘&&’ within ‘||’ [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 698fdcc
+Sun 16 Oct 2022 09:00:14 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 50/70
+f4e8426
