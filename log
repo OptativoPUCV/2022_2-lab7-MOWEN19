@@ -83,3 +83,9 @@ heap.c:31:15: error: format ‘%lu’ expects argument of type ‘long unsigned 
 cc1: all warnings being treated as errors
 Compilation failed
 372c829
+Sun 16 Oct 2022 08:08:12 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+4a63921
