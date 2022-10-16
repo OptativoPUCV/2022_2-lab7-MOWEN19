@@ -274,3 +274,25 @@ heap.c:56:33: error: incompatible types when assigning to type ‘heapElem’ {a
       |                                 ^~~~~~~
 Compilation failed
 84917da
+Sun 16 Oct 2022 08:58:47 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:52:104: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+   52 |   while((auxPosic <= pq->size && pq->heapArray[auxPosic].priority > auxPrio) || auxPosic+1 <= pq->size && pq->heapArray[auxPosic+1].priority > auxPrio){
+      |                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from test.c:4:
+heap.c:53:27: error: incompatible types when initializing type ‘heapElem *’ {aka ‘struct nodo *’} using type ‘heapElem’ {aka ‘struct nodo’}
+   53 |       heapElem *auxTemp = pq->heapArray[(auxPosic-1)/2];
+      |                           ^~
+heap.c:54:23: error: ‘size’ undeclared (first use in this function)
+   54 |       if(auxPosic+1 <=size && pq->heapArray[auxPosic+1].priority > auxPrio){auxPosic ++;}
+      |                       ^~~~
+heap.c:54:23: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:56:33: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   56 |       pq->heapArray[auxPosic] = auxTemp;
+      |                                 ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e4b0066
