@@ -58,7 +58,7 @@ void heap_pop(Heap* pq){
         pq->heapArray[(auxPosic-1)/2] = pq->heapArray[auxPosic];
         pq->heapArray[auxPosic] = auxTemp;  
         auxPosic = auxPosic*2 + 1;
-        //auxPrio = pq->heapArray[auxPosic].priority;
+        auxPrio = pq->heapArray[auxPosic].priority;
   }
 }
 
